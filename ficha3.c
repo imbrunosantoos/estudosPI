@@ -13,7 +13,8 @@ z = x+3;
 for (i=0; i<5; i++) {
 printf ("%d %d %d\n",
 x[i], *y, *z);
-y = y+1; z = z+2;
+y = y+1; z = z+2;}
+}
 
 /* output-
 1 1 4
