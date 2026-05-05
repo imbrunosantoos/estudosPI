@@ -3,8 +3,6 @@
 /*Define a program that reads (using the scanf function) a sequence of integers ending with the number
 0 and prints the largest element of the sequence on the screen.*/
 
-#include <stdio.h>
-
 int main() {
     int numero, maior;
     int primeiro = 1; 
