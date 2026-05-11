@@ -43,3 +43,29 @@ int remove(LInt *l, int x){
     return 0;
 
 }
+
+int removeAll (LInt *l, int x) {
+    LInt ant = NULL;
+    LInt atual = *l;
+    int apagados = 0; 
+
+    while (atual != NULL) {
+        
+        if (atual->valor == x) {
+            LInt lixo = atual;
+            if (ant == NULL) {
+                *l = atual->prox; 
+            } else {
+                ant->prox = atual->prox; 
+            atual = atual->prox; 
+            free(lixo);
+            apagados++;
+            }
+        } else {
+            ant = atual;
+            atual = atual->prox;
+        }
+    }
+    
+    return apagados; 
+}
